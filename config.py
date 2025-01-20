@@ -24,3 +24,4 @@ def config_colors():
         }
     with open("colors.ini", "w") as configfile:
         config.write(configfile)
+    return config
