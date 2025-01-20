@@ -1,7 +1,7 @@
 import configparser
 from keys import keys
 
-def config_groups():
+def config_groups() -> configparser.ConfigParser:
     config = configparser.ConfigParser()
     config.read("config.ini")
     if "keys" not in config:
@@ -10,7 +10,7 @@ def config_groups():
             config.write(configfile)
     return config
 
-def config_colors():
+def config_colors() -> configparser.ConfigParser:
     config = configparser.ConfigParser()
     config.read("colors.ini")
     if "colors" not in config:
